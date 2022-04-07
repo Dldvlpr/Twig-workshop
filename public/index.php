@@ -2,8 +2,12 @@
 
 // Get a $twig object from this file.
 require_once __DIR__ . '/../config/twig.php';
+require_once __DIR__ . '/../src/controller/controller.php';
 
 
-$name = 'Wilder';
 
-echo $twig->render('home.html.twig', ['name' => $name]);
+echo $twig->render('hello.html.twig', ['name' => $name]);
+
+echo $twig->render('person.html.twig', ['person'=> $persons]);
+
+echo $twig->render('_header.html.twig');
